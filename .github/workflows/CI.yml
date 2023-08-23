@@ -32,3 +32,9 @@ jobs:
         run: |
           echo check package version
           cat package.json | jq '.version'
+      - name: commit file
+        run: |
+          touch test.json
+          git add .
+          git commit -m"test commit"
+          git push origin master
